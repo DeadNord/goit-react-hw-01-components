@@ -6,3 +6,8 @@ npx mrm@2lint-staged
 npm install --save-dev prettier husky lint-staged-->
 
 <!-- npm install -g serve -->
+
+<!-- "lint-staged": {
+    "*.{js, jsx}": "eslint --cache --fix",
+    "*.{js, jsx, json, css, scss, md}": "prettier --write"
+  } -->
