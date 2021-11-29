@@ -1,7 +1,9 @@
 import TransactionItem from "./TransactionHistoryItem";
 import s from "./TransactionHistory.module.css"
+import PropTypes from "prop-types"
 
-export default function Stat({ transactions }) {
+
+export default function TransactionHistory({ transactions }) {
     return (
         <table className={s.transaction}>
   <thead className={s.header}>
@@ -24,4 +26,8 @@ export default function Stat({ transactions }) {
   </tbody>
 </table>
     )
+}
+
+TransactionHistory.propTypes = {
+  transactions: PropTypes.array,
 }
