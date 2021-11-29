@@ -1,9 +1,10 @@
 import TransactionItem from "./TransactionHistoryItem";
+import s from "./TransactionHistory.module.css"
 
 export default function Stat({ transactions }) {
     return (
-        <table class="transaction-history">
-  <thead>
+        <table className={s.transaction}>
+  <thead className={s.header}>
     <tr>
       <th>Type</th>
       <th>Amount</th>
@@ -11,8 +12,7 @@ export default function Stat({ transactions }) {
     </tr>
   </thead>
 
-  <tbody>
-    <tr>
+  <tbody className={s.history}>
       {transactions.map(transaction => (
               <TransactionItem
                         key = {transaction.id}
@@ -21,7 +21,6 @@ export default function Stat({ transactions }) {
               currency={transaction.currency}
               />
                 ))}
-    </tr>
   </tbody>
 </table>
     )

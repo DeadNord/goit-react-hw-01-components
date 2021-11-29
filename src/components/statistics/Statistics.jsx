@@ -1,11 +1,12 @@
 import StatisticsItem from "./StatisticsItem";
+import s from './Statistics.module.css'
 
 export default function Statistics({ stats }) {
     return (
-        <section class="statistics">
-  <h2 class="title">Upload stats</h2>
+        <section className={s.statistics}>
+  <h2 className={s.title}>Upload stats</h2>
 
-  <ul class="stat-list">
+  <ul className={s.stats}>
                 {stats.map(statsEl => (
                         <StatisticsItem
                         key={statsEl.id}

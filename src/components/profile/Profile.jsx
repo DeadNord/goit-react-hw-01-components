@@ -1,31 +1,32 @@
 import PropTypes from "prop-types"
+import s from './Profile.module.css'
 
 export default function Profile({ url, userName, userTag, locate, followers, views, likes }) {
     return (
-        <div class="profile">
-  <div class="description">
+      <div className={s.card}>
+        <div className={s.description}>
     <img
       src={url}
       alt={userName}
-      class="avatar"
+      className={s.avatar}
     />
-    <p class="name">{userName}</p>
-    <p class="tag">@{userTag}</p>
-    <p class="location">{locate}</p>
+    <p className={s.name}>{userName}</p>
+    <p className={s.tag}>@{userTag}</p>
+    <p className={s.location}>{locate}</p>
   </div>
 
-  <ul class="stats">
-    <li>
-      <span class="label">Followers</span>
-      <span class="quantity">{followers}</span>
+  <ul className={s.stats}>
+    <li className={s.statsItem}>
+      <span className={s.label}>Followers</span>
+      <span className={s.quantity}>{followers}</span>
     </li>
-    <li>
-      <span class="label">Views</span>
-      <span class="quantity">{views}</span>
+    <li className={s.statsItem}>
+      <span className={s.label}>Views</span>
+      <span className={s.quantity}>{views}</span>
     </li>
-    <li>
-      <span class="label">Likes</span>
-      <span class="quantity">{likes}</span>
+    <li className={s.statsItem}>
+      <span className={s.label}>Likes</span>
+      <span className={s.quantity}>{likes}</span>
     </li>
   </ul>
 </div>
