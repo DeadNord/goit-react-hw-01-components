@@ -22,9 +22,9 @@ export default function App() {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-      {<Statistics stats={data} />}
-      {<FriendList friends={friends} />}
-      {<TransactionHistory transactions={transactions} />}
+      <Statistics title="Upload stats" stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory transactions={transactions} />
     </div>
   );
 }
