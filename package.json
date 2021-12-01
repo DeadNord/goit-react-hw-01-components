@@ -50,5 +50,9 @@
   "lint-staged": {
     "*.{js, jsx}": "eslint --cache --fix",
     "*.{js, jsx, json, css, scss, md}": "prettier --write"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
